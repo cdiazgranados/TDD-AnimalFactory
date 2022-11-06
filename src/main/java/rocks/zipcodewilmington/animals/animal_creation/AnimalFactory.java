@@ -14,7 +14,7 @@ import java.util.Date;
  */
 public class AnimalFactory {
     public static Dog createDog(String name, Date birthDate) {
-        Integer newId = DogHouse.getNumberOfDogs();
+        Integer newId = DogHouse.getNumberOfDogs(); //Caro: this is the id section
         return new Dog(name, birthDate, newId);
     }
 
