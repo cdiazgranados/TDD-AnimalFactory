@@ -42,6 +42,19 @@ public class AnimalFactoryTest {
     }
 
 
+    @Test
+    public void testCreateCat1() {
+        // Given (some
+        String name = "Leon";
+        Date birthDate = new Date();
+        Cat cat = AnimalFactory.createCat(name, birthDate);
+
+
+        // Then
+        Assert.assertEquals("Leon",  cat.getName());
+        Assert.assertEquals(birthDate,  cat.getBirthDate());
+    }
+
 
     //Create Test for Animal createCat(String name, Date birthDate)
         //ensure that when .createCat is invoked on AnimalFactoryTest
@@ -64,6 +77,18 @@ public class AnimalFactoryTest {
 
         // Then
         Assert.assertEquals(givenDog,  retrievedDog);
+    }
+
+    @Test
+    public void testCreateDog1() {
+        // Given (some
+        String name = "Milo";
+        Date birthDate = new Date();
+        Dog dog = AnimalFactory.createDog(name, birthDate);
+
+        // Then
+        Assert.assertEquals("Milo",  dog.getName());
+        Assert.assertEquals(birthDate,  dog.getBirthDate());
     }
 
 }
